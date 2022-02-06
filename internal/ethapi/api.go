@@ -2510,6 +2510,7 @@ type CallBundleArgs struct {
 // a past block.
 // The sender is responsible for signing the transactions and using the correct
 // nonce and ensuring validity
+//nolint
 func (s *BundleAPI) CallBundle(ctx context.Context, args CallBundleArgs) (map[string]interface{}, error) {
 	if len(args.Txs) == 0 {
 		return nil, errors.New("bundle missing txs")

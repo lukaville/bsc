@@ -134,10 +134,10 @@ func GetAPIs(apiBackend Backend, chain *core.BlockChain) []rpc.API {
 			Service:   NewPrivateAccountAPI(apiBackend, nonceLock),
 			Public:    false,
 		}, {
-            Namespace: "eth",
-            Version:   "1.0",
-            Service:   NewBundleAPI(apiBackend, chain),
-            Public:    true,
-        },
+			Namespace: "eth",
+			Version:   "1.0",
+			Service:   NewBundleAPI(apiBackend, chain),
+			Public:    true,
+		},
 	}
 }
